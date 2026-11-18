@@ -1,0 +1,126 @@
+/* ===================================================================
+   AUREL — Interactive Draggable Comparison Slider Styles
+   =================================================================== */
+
+.comparison-slider-container {
+  position: relative;
+  width: 100%;
+  height: clamp(380px, 55vw, 680px);
+  overflow: hidden;
+  user-select: none;
+  cursor: ew-resize;
+  background-color: var(--color-charcoal);
+  border: 1px solid var(--border-light-gold);
+  box-shadow: 0 25px 70px rgba(36, 34, 31, 0.18);
+}
+
+.image-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  display: block;
+}
+
+/* Floating Badges */
+.label-pill {
+  position: absolute;
+  bottom: 2rem;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.label-after {
+  right: 2rem;
+  background-color: rgba(22, 21, 19, 0.85);
+  color: var(--color-warm-ivory);
+  border: 1px solid rgba(173, 148, 112, 0.4);
+}
+
+.label-before {
+  left: 2rem;
+  background-color: rgba(245, 241, 233, 0.88);
+  color: var(--color-charcoal);
+  border: 1px solid rgba(36, 34, 31, 0.2);
+}
+
+/* Divider Line */
+.slider-divider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+  cursor: ew-resize;
+  transform: translateX(-50%);
+}
+
+/* Handle */
+.comparison-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-charcoal);
+  color: var(--color-gold-light);
+  border: 2px solid var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.comparison-slider-container:hover .comparison-handle,
+.comparison-slider-container.is-dragging .comparison-handle {
+  transform: translate(-50%, -50%) scale(1.15);
+  background-color: var(--color-charcoal-deep);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+/* Responsive labels */
+@media (max-width: 640px) {
+  .label-pill {
+    bottom: 1rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.65rem;
+  }
+
+  .label-after {
+    right: 1rem;
+  }
+
+  .label-before {
+    left: 1rem;
+  }
+
+  .comparison-handle {
+    width: 38px;
+    height: 38px;
+  }
+}

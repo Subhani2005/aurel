@@ -1,0 +1,22 @@
+/* ===================================================================
+   AUREL — App Shell Styles
+   =================================================================== */
+
+.aurel-app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--color-warm-ivory);
+}
+
+.main-content-flow {
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+.page-transition-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}

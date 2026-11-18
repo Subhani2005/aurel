@@ -1,0 +1,68 @@
+/* ===================================================================
+   AUREL — Filter Bar Styles
+   =================================================================== */
+
+.filter-bar-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 4rem;
+  width: 100%;
+}
+
+.filter-scroll-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem;
+  background-color: var(--color-soft-beige);
+  border: 1px solid var(--border-light-gold);
+  overflow-x: auto;
+  max-width: 100%;
+  scrollbar-width: none;
+}
+
+.filter-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.filter-tab-btn:hover {
+  color: var(--color-muted-gold);
+}
+
+.filter-tab-btn.filter-active {
+  background-color: var(--color-charcoal);
+  color: var(--color-warm-ivory);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(36, 34, 31, 0.15);
+}
+
+.filter-count {
+  font-size: 0.65rem;
+  opacity: 0.65;
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+  background: rgba(36, 34, 31, 0.08);
+}
+
+.filter-tab-btn.filter-active .filter-count {
+  background: rgba(245, 241, 233, 0.2);
+  color: var(--color-gold-light);
+  opacity: 1;
+}

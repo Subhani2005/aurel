@@ -1,0 +1,124 @@
+/* ===================================================================
+   AUREL — Statistics Section Styles
+   =================================================================== */
+
+.stats-section {
+  position: relative;
+  padding: clamp(5rem, 9vw, 8.5rem) 0;
+  background-color: var(--color-charcoal-deep);
+  color: var(--color-warm-ivory);
+  overflow: hidden;
+}
+
+.stats-fixed-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.16;
+  filter: grayscale(80%);
+}
+
+.stats-dark-veil {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(22, 21, 19, 0.75) 0%,
+    rgba(22, 21, 19, 0.95) 100%
+  );
+}
+
+.stats-container {
+  position: relative;
+  z-index: 3;
+}
+
+.stats-intro {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto clamp(3rem, 5vw, 5rem);
+}
+
+.stats-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 300;
+  color: #FFFFFF;
+}
+
+.stats-numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.2rem 1.75rem;
+  background: rgba(36, 34, 31, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(173, 148, 112, 0.22);
+  transition: all 0.4s var(--ease-editorial);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-gold-light);
+  background: rgba(46, 43, 39, 0.75);
+}
+
+.stat-counter-wrap {
+  margin-bottom: 0.75rem;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 5vw, 4.4rem);
+  font-weight: 300;
+  color: #FFFFFF;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+.stat-suffix {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  color: var(--color-gold-light);
+  margin-left: 0.25rem;
+  font-weight: 400;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  margin-bottom: 0.5rem;
+}
+
+.stat-desc {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(245, 241, 233, 0.65);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .stats-numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .stats-numbers-grid {
+    grid-template-columns: 1fr;
+  }
+}

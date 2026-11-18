@@ -1,0 +1,84 @@
+/* ===================================================================
+   AUREL — Custom Luxury Cursor
+   =================================================================== */
+
+.luxury-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transition: transform 0.08s linear;
+  will-change: transform;
+}
+
+.cursor-core {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-muted-gold);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cursor-ring {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(173, 148, 112, 0.45);
+  transition: width 0.35s var(--ease-editorial),
+              height 0.35s var(--ease-editorial),
+              top 0.35s var(--ease-editorial),
+              left 0.35s var(--ease-editorial),
+              background-color 0.35s ease,
+              border-color 0.35s ease;
+}
+
+/* Hover state on clickable elements */
+.luxury-cursor-dot.cursor-hover .cursor-ring {
+  top: -26px;
+  left: -26px;
+  width: 52px;
+  height: 52px;
+  background-color: rgba(173, 148, 112, 0.12);
+  border-color: var(--color-muted-gold);
+}
+
+.luxury-cursor-dot.cursor-hover .cursor-core {
+  opacity: 0.5;
+  transform: scale(0.6);
+}
+
+/* Drag state on Before & After slider */
+.luxury-cursor-dot.cursor-drag .cursor-ring {
+  top: -36px;
+  left: -36px;
+  width: 72px;
+  height: 72px;
+  background-color: rgba(36, 34, 31, 0.7);
+  border-color: var(--color-gold-light);
+  backdrop-filter: blur(4px);
+}
+
+.cursor-label {
+  position: absolute;
+  top: -8px;
+  left: -20px;
+  width: 40px;
+  text-align: center;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-gold-light);
+}
+
+@media (pointer: coarse) {
+  .luxury-cursor-dot {
+    display: none !important;
+  }
+}

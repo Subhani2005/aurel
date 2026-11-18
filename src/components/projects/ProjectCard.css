@@ -1,0 +1,208 @@
+/* ===================================================================
+   AUREL — Project Card Styles
+   =================================================================== */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-soft-beige);
+  transition: transform 0.4s var(--ease-editorial);
+}
+
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+.project-image-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  overflow: hidden;
+}
+
+/* Asymmetric Proportions */
+.layout-tall .project-image-box {
+  min-height: 560px;
+}
+
+.layout-wide .project-image-box {
+  min-height: 400px;
+}
+
+.layout-large .project-image-box {
+  min-height: 600px;
+}
+
+.project-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  will-change: transform;
+}
+
+.project-card:hover .project-card-img {
+  transform: scale(1.05);
+}
+
+/* Contrast Overlay */
+.project-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 21, 19, 0.25) 0%,
+    rgba(22, 21, 19, 0.1) 40%,
+    rgba(22, 21, 19, 0.85) 100%
+  );
+  pointer-events: none;
+  transition: background 0.4s ease;
+}
+
+.project-card:hover .project-card-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 21, 19, 0.35) 0%,
+    rgba(22, 21, 19, 0.2) 40%,
+    rgba(22, 21, 19, 0.92) 100%
+  );
+}
+
+/* Wishlist Toggle Button */
+.project-wishlist-toggle {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(22, 21, 19, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.project-wishlist-toggle:hover {
+  background: #FFFFFF;
+  color: var(--color-charcoal);
+  transform: scale(1.1);
+}
+
+.project-wishlist-toggle.is-active {
+  background: rgba(22, 21, 19, 0.85);
+  border-color: var(--color-muted-gold);
+  color: var(--color-muted-gold);
+}
+
+/* Metadata Overlay at Bottom */
+.project-meta-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  z-index: 5;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.card-category-tag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+}
+
+.card-year {
+  font-size: 0.7rem;
+  color: rgba(245, 241, 233, 0.6);
+  letter-spacing: 0.1em;
+}
+
+.card-project-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.card-location-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--color-warm-sand);
+  margin-bottom: 0.6rem;
+}
+
+.card-short-desc {
+  font-size: 0.825rem;
+  line-height: 1.5;
+  color: rgba(245, 241, 233, 0.75);
+  margin-bottom: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.card-footer-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(245, 241, 233, 0.15);
+  padding-top: 0.85rem;
+}
+
+.explore-text {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 233, 0.8);
+  transition: color 0.3s ease;
+}
+
+.arrow-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 241, 233, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-warm-ivory);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .explore-text {
+  color: var(--color-gold-light);
+}
+
+.project-card:hover .arrow-badge {
+  background: var(--color-gold-light);
+  border-color: var(--color-gold-light);
+  color: var(--color-charcoal);
+  transform: translate(2px, -2px);
+}

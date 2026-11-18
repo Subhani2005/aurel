@@ -1,0 +1,207 @@
+/* ===================================================================
+   AUREL — Philosophy Section Styles
+   =================================================================== */
+
+.philosophy-section {
+  position: relative;
+  background-color: var(--color-charcoal);
+  color: var(--color-warm-ivory);
+  overflow: hidden;
+}
+
+.philosophy-bg-texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+.philosophy-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(3rem, 6vw, 6.5rem);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Visual Left Column */
+.philosophy-visual-col {
+  position: relative;
+}
+
+.visual-frame-container {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.visual-image-wrapper {
+  position: relative;
+  width: 88%;
+  height: 560px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.philosophy-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visual-frame-container:hover .philosophy-main-image {
+  transform: scale(1.04);
+}
+
+.visual-floating-card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 260px;
+  padding: 1rem;
+  background: rgba(22, 21, 19, 0.88);
+  border: 1px solid rgba(173, 148, 112, 0.35);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s var(--ease-editorial);
+}
+
+.visual-frame-container:hover .visual-floating-card {
+  transform: translateY(-6px);
+}
+
+.floating-card-image {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.floating-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption-sub {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  margin-bottom: 0.25rem;
+}
+
+.caption-text {
+  font-size: 0.75rem;
+  color: rgba(245, 241, 233, 0.7);
+  line-height: 1.4;
+}
+
+.visual-stamp-wireframe {
+  position: absolute;
+  top: 1.5rem;
+  left: -2rem;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--color-gold-light);
+  opacity: 0.7;
+}
+
+/* Content Right Column */
+.philosophy-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophy-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: #FFFFFF;
+  margin-bottom: 1.75rem;
+}
+
+.philosophy-heading em {
+  font-style: italic;
+  font-family: var(--font-heading);
+  color: var(--color-gold-light);
+}
+
+.philosophy-lead {
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(245, 241, 233, 0.85);
+  margin-bottom: 2.75rem;
+}
+
+/* Three Pillars */
+.philosophy-pillars-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  border-top: 1px solid rgba(245, 241, 233, 0.1);
+  padding-top: 2rem;
+}
+
+.pillar-item {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.pillar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(173, 148, 112, 0.15);
+  border: 1px solid rgba(173, 148, 112, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-light);
+  flex-shrink: 0;
+}
+
+.pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+}
+
+.pillar-desc {
+  font-size: 0.875rem;
+  color: rgba(245, 241, 233, 0.65);
+  line-height: 1.5;
+}
+
+.philosophy-cta-row {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .philosophy-split-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-image-wrapper {
+    width: 100%;
+    height: 440px;
+  }
+
+  .visual-stamp-wireframe {
+    display: none;
+  }
+}

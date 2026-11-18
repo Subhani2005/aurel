@@ -1,0 +1,140 @@
+/* ===================================================================
+   AUREL — Keyframe & Component Micro-Animations
+   =================================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleSlowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes marqueeSlow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Reusable Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.8s var(--ease-editorial) forwards;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.9s var(--ease-editorial) forwards;
+}
+
+.animate-scale-zoom {
+  animation: scaleSlowZoom 18s ease-out infinite alternate;
+}
+
+.animate-float {
+  animation: floatSoft 5s ease-in-out infinite;
+}
+
+/* Image Reveal Container */
+.img-reveal-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-soft-beige);
+}
+
+.img-reveal-wrapper img {
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  will-change: transform;
+}
+
+.img-reveal-wrapper:hover img {
+  transform: scale(1.045);
+}
+
+/* Shimmer overlay for loading images */
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    var(--color-warm-ivory) 0%,
+    var(--color-soft-beige) 50%,
+    var(--color-warm-ivory) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

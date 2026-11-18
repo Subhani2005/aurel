@@ -1,0 +1,135 @@
+/* ===================================================================
+   AUREL — Video Showreel Modal Styles
+   =================================================================== */
+
+.video-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background-color: rgba(10, 9, 8, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem var(--container-padding);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.video-modal-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  background-color: #000;
+  border: 1px solid rgba(173, 148, 112, 0.3);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.8);
+  animation: fadeUp 0.4s var(--ease-editorial);
+}
+
+.video-modal-close-btn {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-warm-ivory);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.video-modal-close-btn:hover {
+  color: var(--color-gold-light);
+  transform: translateY(-2px);
+}
+
+.video-player-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.showreel-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 13, 12, 0.45) 0%,
+    transparent 35%,
+    transparent 65%,
+    rgba(14, 13, 12, 0.8) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+  pointer-events: none;
+}
+
+.showreel-brand-stamp {
+  pointer-events: auto;
+}
+
+.stamp-sub {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+}
+
+.stamp-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  color: #FFFFFF;
+  margin-top: 0.25rem;
+}
+
+.video-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: auto;
+  border-top: 1px solid rgba(245, 241, 233, 0.15);
+  padding-top: 1rem;
+}
+
+.control-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.control-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-warm-ivory);
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.control-btn:hover {
+  color: var(--color-gold-light);
+}
+
+.video-chapter-info {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-warm-sand);
+}

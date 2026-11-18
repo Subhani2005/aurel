@@ -1,0 +1,115 @@
+/* ===================================================================
+   AUREL — LUXURY INTERIOR ARCHITECTURE & DESIGN STUDIO
+   Design System & Global Variables
+   =================================================================== */
+
+:root {
+  /* Brand Luxury Palette */
+  --color-warm-ivory: #F5F1E9;
+  --color-soft-beige: #E8DED0;
+  --color-warm-sand: #C8B69D;
+  --color-charcoal: #24221F;
+  --color-charcoal-deep: #161513;
+  --color-charcoal-soft: #322F2B;
+  --color-deep-brown: #46382F;
+  --color-muted-gold: #AD9470;
+  --color-gold-light: #CBB696;
+  --color-gold-dark: #8F7653;
+
+  /* Functional Colors */
+  --bg-primary: #F5F1E9;
+  --bg-secondary: #E8DED0;
+  --bg-dark: #24221F;
+  --bg-dark-card: #2E2B27;
+  --text-primary: #24221F;
+  --text-secondary: #6B6258;
+  --text-muted: #8E8376;
+  --text-light: #F5F1E9;
+  --text-light-muted: #C8B69D;
+
+  /* Borders & Dividers */
+  --border-light: rgba(36, 34, 31, 0.1);
+  --border-light-gold: rgba(173, 148, 112, 0.28);
+  --border-dark: rgba(245, 241, 233, 0.12);
+  --border-dark-gold: rgba(173, 148, 112, 0.35);
+
+  /* Subtle Glassmorphism */
+  --glass-nav: rgba(245, 241, 233, 0.82);
+  --glass-nav-dark: rgba(22, 21, 19, 0.85);
+  --glass-card: rgba(245, 241, 233, 0.65);
+  --glass-card-dark: rgba(36, 34, 31, 0.65);
+  --glass-blur: 16px;
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-border-dark: rgba(173, 148, 112, 0.18);
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-serif-accent: 'Playfair Display', Georgia, serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Type Scale */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 2rem;       /* 32px */
+  --text-4xl: 2.75rem;    /* 44px */
+  --text-5xl: 3.75rem;    /* 60px */
+  --text-6xl: 5rem;       /* 80px */
+  --text-hero: clamp(2.8rem, 7vw, 6.5rem);
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8.5rem;
+
+  /* Layout */
+  --max-width: 1440px;
+  --max-width-narrow: 1120px;
+  --nav-height: 88px;
+  --nav-height-scrolled: 72px;
+  --container-padding: clamp(1.25rem, 5vw, 4rem);
+
+  /* Transitions & Animation Easing */
+  --ease-editorial: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-base: 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 20px -2px rgba(36, 34, 31, 0.05);
+  --shadow-soft: 0 12px 36px -4px rgba(36, 34, 31, 0.08);
+  --shadow-elevation: 0 24px 60px -8px rgba(36, 34, 31, 0.14);
+  --shadow-floating: 0 30px 80px -12px rgba(22, 21, 19, 0.22);
+
+  /* Z-Index Hierarchy */
+  --z-negative: -1;
+  --z-base: 1;
+  --z-elevated: 10;
+  --z-sticky: 100;
+  --z-dropdown: 200;
+  --z-header: 500;
+  --z-modal-backdrop: 900;
+  --z-modal: 1000;
+  --z-toast: 1100;
+  --z-cursor: 9999;
+}

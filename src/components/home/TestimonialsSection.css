@@ -1,0 +1,203 @@
+/* ===================================================================
+   AUREL — Testimonials Section Styles
+   =================================================================== */
+
+.testimonials-section {
+  background-color: var(--color-warm-ivory);
+  position: relative;
+}
+
+.testimonials-header {
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+}
+
+.testimonial-card-frame {
+  background-color: var(--color-soft-beige);
+  border: 1px solid var(--border-light-gold);
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  position: relative;
+  box-shadow: 0 15px 40px rgba(36, 34, 31, 0.04);
+}
+
+.testimonial-inner-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  animation: fadeIn 0.6s var(--ease-editorial);
+}
+
+.testimonial-content-side {
+  position: relative;
+}
+
+.quote-mark-icon {
+  color: var(--color-warm-sand);
+  opacity: 0.6;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial-quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.3vw, 1.95rem);
+  font-weight: 300;
+  line-height: 1.45;
+  color: var(--color-charcoal);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.testimonial-author-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.author-avatar-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--color-muted-gold);
+  flex-shrink: 0;
+}
+
+.author-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-initials-fallback {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-charcoal);
+  color: var(--color-warm-ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.author-name {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  margin-bottom: 0.15rem;
+}
+
+.author-title {
+  font-size: 0.8rem;
+  color: var(--color-muted-gold);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.author-project {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.author-project span {
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+/* Location Side */
+.testimonial-location-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid var(--border-light-gold);
+  padding-left: clamp(1.5rem, 4vw, 3rem);
+  height: 100%;
+  min-height: 280px;
+}
+
+.stamp-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stamp-year {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--color-muted-gold);
+  font-weight: 600;
+}
+
+.stamp-city {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+}
+
+.stamp-verified {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* Nav Controls */
+.testimonial-nav-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.testimonial-counter {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.counter-divider {
+  margin: 0 0.35rem;
+  color: var(--color-muted-gold);
+}
+
+.testimonial-arrows {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.t-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-charcoal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-charcoal);
+  transition: all 0.3s ease;
+}
+
+.t-arrow-btn:hover {
+  background-color: var(--color-charcoal);
+  color: var(--color-warm-ivory);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonial-inner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-location-side {
+    border-left: none;
+    border-top: 1px solid var(--border-light-gold);
+    padding-left: 0;
+    padding-top: 2rem;
+    min-height: auto;
+  }
+}

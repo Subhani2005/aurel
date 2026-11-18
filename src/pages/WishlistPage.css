@@ -1,0 +1,207 @@
+/* ===================================================================
+   AUREL — Wishlist Page Styles
+   =================================================================== */
+
+.wishlist-page-wrapper {
+  background-color: var(--color-warm-ivory);
+  min-height: 100vh;
+}
+
+/* Page Hero */
+.wishlist-hero-banner {
+  position: relative;
+  padding: clamp(9rem, 14vw, 13rem) 0 clamp(4rem, 6vw, 6rem);
+  background-color: var(--color-charcoal-deep);
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.wishlist-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+}
+
+.wishlist-hero-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 21, 19, 0.7) 0%,
+    rgba(22, 21, 19, 0.88) 60%,
+    rgba(22, 21, 19, 0.96) 100%
+  );
+}
+
+.wishlist-hero-container {
+  position: relative;
+  z-index: 5;
+  max-width: 820px;
+}
+
+.wishlist-hero-title {
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+
+.wishlist-hero-title em {
+  font-style: italic;
+  font-family: var(--font-heading);
+  color: var(--color-gold-light);
+}
+
+.wishlist-hero-lead {
+  color: rgba(245, 241, 233, 0.85);
+  max-width: 650px;
+}
+
+/* Action Bar */
+.wishlist-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-light);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.wishlist-count-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.wishlist-count-badge strong {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-charcoal);
+}
+
+.wishlist-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.clear-wishlist-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  padding: 0.5rem;
+  transition: color 0.25s ease;
+}
+
+.clear-wishlist-btn:hover {
+  color: #D32F2F;
+}
+
+/* Wishlist Grid */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Callout */
+.wishlist-consultation-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  background-color: var(--color-soft-beige);
+  border: 1px solid var(--border-light-gold);
+  flex-wrap: wrap;
+}
+
+.callout-text {
+  max-width: 680px;
+}
+
+.callout-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  margin-bottom: 0.5rem;
+}
+
+.callout-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Empty State */
+.wishlist-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(4rem, 8vw, 7rem) 1.5rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.empty-heart-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px dashed var(--color-muted-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted-gold);
+  margin-bottom: 2rem;
+  background-color: rgba(173, 148, 112, 0.08);
+}
+
+.empty-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.empty-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.empty-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wishlist-bar-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
